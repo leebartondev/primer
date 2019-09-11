@@ -1,0 +1,28 @@
+// Developed by
+// Henry Lee Barton III
+
+/// /////////////////////////////////////////////////
+// R E Q U I R E D   /   C U S T O M   I M P O R T S
+/// /////////////////////////////////////////////////
+
+// Required imports
+import React from 'react'
+
+/// /////////////////////////////////////////////////
+// G L O B A L   V A R I A B L E S
+/// /////////////////////////////////////////////////
+
+const ICON = 'x'
+const ICON_CLASS = 'icon close'
+
+/// /////////////////////////////////////////////////
+// C O M P O N E N T   D E F I N I T I O N
+/// /////////////////////////////////////////////////
+
+function CloseIcon (props) {
+  return (
+    <span className={ICON_CLASS} onClick={props.onClick}>{ICON}</span>
+  )
+}
+
+export default CloseIcon

@@ -1,0 +1,19 @@
+.remove-padding { margin: 0; padding: 0; }
+.title-margin { margin: 25px; }
+.center-text { text-align: center; }
+.container.center { display: flex; justify-content: center; align-items: center; }
+.fixed-full { position: fixed; top: 0; left: 0; right: 0; height: stretch; }
+.border { border: 1px solid; }
+
+/* ICONS */
+.icon.close { float: right; }
+.icon.close:hover { cursor: pointer; }
+
+/* LAYOUT */
+.float.right { float: left; }
+.row-padding { padding: 0 25px 25px 25px; }
+.btn-margin.left { margin-left: 25px }
+
+/* REACT ROUTER COMPONENTS */
+.link { color: inherit; text-decoration: inherit; }
+.link.session:hover { cursor: pointer; text-decoration: underline; }
