@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/primer/static/css/main.db8700f0.chunk.css",
+    "main.js": "/primer/static/js/main.32746554.chunk.js",
+    "main.js.map": "/primer/static/js/main.32746554.chunk.js.map",
+    "runtime~main.js": "/primer/static/js/runtime~main.b83768aa.js",
+    "runtime~main.js.map": "/primer/static/js/runtime~main.b83768aa.js.map",
+    "static/js/2.af6e74e4.chunk.js": "/primer/static/js/2.af6e74e4.chunk.js",
+    "static/js/2.af6e74e4.chunk.js.map": "/primer/static/js/2.af6e74e4.chunk.js.map",
+    "index.html": "/primer/index.html",
+    "precache-manifest.607ba7db9fa76f52622473aa3f8b3e4f.js": "/primer/precache-manifest.607ba7db9fa76f52622473aa3f8b3e4f.js",
+    "service-worker.js": "/primer/service-worker.js",
+    "static/css/main.db8700f0.chunk.css.map": "/primer/static/css/main.db8700f0.chunk.css.map"
+  }
+}
