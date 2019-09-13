@@ -11,14 +11,19 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },
+  "main": "public/electron.js",
+  "homepage": "./",
   "scripts": {
-    "start": "npm run code-analysis && npm run test && react-scripts start",
+    "start": "npm run code-analysis && npm run test:nowatch && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:nowatch": "set CI=true && react-scripts test --env=jsdom",
     "code-analysis": "standard",
     "code-analysis:fix": "standard --fix",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron:dev": "nf start -p 3000",
+    "electron:start": "node electron-wait",
+    "electron": "electron ."
   },
   "pre-commit": [
     "test:nowatch",
@@ -46,8 +51,10 @@
   },
   "devDependencies": {
     "bootstrap": "^4.3.1",
+    "electron": "^6.0.8",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "foreman": "^3.0.1",
     "pre-commit": "^1.2.2",
     "react-bootstrap": "^1.0.0-beta.9",
     "standard": "^13.1.0"
