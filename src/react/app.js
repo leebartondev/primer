@@ -29,7 +29,7 @@ const PATH_SESSION = PATH_PROJECT + '/session'
 
 function App () {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path={PATH_DEFAULT} component={Projects} />
         <Route exact path={PATH_PROJECTS} component={Projects} />
