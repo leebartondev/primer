@@ -19,9 +19,9 @@ import Session from './components/session/session.js'
 /// /////////////////////////////////////////////////
 
 const PATH_DEFAULT = '/'
-const PATH_PROJECTS = '/projects'
+const PATH_PROJECTS = '/projects/'
 const PATH_PROJECT = '/projects/:id'
-const PATH_SESSION = PATH_PROJECT + '/session'
+const PATH_SESSION = PATH_PROJECT + '/session/'
 
 /// /////////////////////////////////////////////////
 // C O M P O N E N T   D E F I N I T I O N
@@ -35,7 +35,7 @@ function App () {
         <Route exact path={PATH_PROJECTS} component={Projects} />
         <Route exact path={PATH_PROJECT} component={Project} />
         <Route exact path={PATH_SESSION} component={Session} />
-        <Route component={Session} />
+        <Route component={Projects} />
       </Switch>
     </Router>
   )

@@ -37,6 +37,9 @@ const LOG_TEXT = { START: 'Start Time', PAUSE: 'Paused At', RESUME: 'Resumed At'
 const LOG_VARIANT = { START: 'primary', PAUSE: 'warning', RESUME: 'info', END: 'secondary' }
 const LOG_DATE_TIME = () => new Date().toLocaleTimeString()
 
+// Paths
+const PATH_PROJECT = id => `/projects/${id}`
+
 /// /////////////////////////////////////////////////
 // C O M P O N E N T  D E F I N I T I O N
 /// /////////////////////////////////////////////////
@@ -88,7 +91,7 @@ function SessionController (props) {
       logs: props.session.logs,
       projectId: props.projectId
     })
-    props.history.push(`/projects/${props.projectId}`)
+    props.history.push(PATH_PROJECT(props.projectId))
   }
 
   return (

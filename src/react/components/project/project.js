@@ -7,6 +7,7 @@
 
 // Require imports
 import React, { useState } from 'react'
+import { withRouter, Link } from 'react-router-dom'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 
 // Custom file imports
@@ -33,6 +34,10 @@ const MAX_COLS = 4
 const DEFAULT_MESSAGE = 'No sessions to display'
 const CARD_BG = 'success'
 
+// Paths
+const PATH_DEFAULT = '/'
+const PATH_SESSION = id => `/projects/${id}/session`
+
 /// /////////////////////////////////////////////////
 // C O M P O N E N T   D E F I N I T I O N
 /// /////////////////////////////////////////////////
@@ -55,6 +60,10 @@ function Project (props) {
     setShowSessionSummary(true)
   }
 
+  const handleButtonClick = path => {
+    props.history.push(path)
+  }
+
   return (
     <Container fluid={CONTAINER_IS_FLUID}>
       <h1 className={TITLE_STYLE}>{project.title}</h1>
@@ -69,8 +78,8 @@ function Project (props) {
           </Row>) : <p className={TITLE_STYLE}>{DEFAULT_MESSAGE}</p>}
       <Row className={ROW_STYLE.FLOAT}>
         <Col>
-          <Button href={`/projects/${project.id}/session`} variant={BUTTON.PRIMARY}> + New Session </Button>
-          <Button href={`/`} variant={BUTTON.SECONDARY} className={BUTTON_MARGIN}> Back </Button>
+          <Button onClick={() => handleButtonClick(PATH_SESSION(project.id))} variant={BUTTON.PRIMARY}> + New Session </Button>
+          <Button onClick={() => handleButtonClick(PATH_DEFAULT)} variant={BUTTON.SECONDARY} className={BUTTON_MARGIN}> Back </Button>
         </Col>
       </Row>
       <SessionSummary isVisible={showSessionSummary} session={sessionToSummarize} close={() => { setShowSessionSummary(false) }} />
@@ -78,4 +87,4 @@ function Project (props) {
   )
 }
 
-export default Project
+export default withRouter(Project)

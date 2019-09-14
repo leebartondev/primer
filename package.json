@@ -13,7 +13,7 @@
   },
   "homepage": "https://hleebarton97.github.io/primer",
   "scripts": {
-    "start": "npm run code-analysis && npm run test && react-scripts start",
+    "start": "npm run code-analysis && npm run test:nowatch && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:nowatch": "set CI=true && react-scripts test --env=jsdom",

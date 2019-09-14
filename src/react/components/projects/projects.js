@@ -35,6 +35,9 @@ const CARD_BG = 'success'
 // State
 const INIT_STATE = { BOOL: false }
 
+// Paths
+const PATH_PROJECT = id => `/projects/${id}`
+
 /// /////////////////////////////////////////////////
 // C O M P O N E N T   D E F I N I T I O N
 /// /////////////////////////////////////////////////
@@ -77,7 +80,7 @@ function Projects (props) {
                 ? <Col key={index}>
                   <PrimerCard key={index} bg={CARD_BG} id={project.id}
                     header={project.title} text={project.desc}
-                    to={`/projects/${project.id}`} handler={id => { deleteProject(id) }} />
+                    to={PATH_PROJECT(project.id)} handler={id => { deleteProject(id) }} />
                 </Col> : <Col key={index} />)}
           </Row>) : <p className={TITLE_STYLE}>{DEFAULT_MESSAGE}</p>}
       <Row className={ROW_STYLE.FLOAT}>
