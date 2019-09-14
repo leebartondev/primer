@@ -70,7 +70,7 @@ function Project (props) {
       <Row className={ROW_STYLE.FLOAT}>
         <Col>
           <Button href={`/projects/${project.id}/session`} variant={BUTTON.PRIMARY}> + New Session </Button>
-          <Button href={`/projects`} variant={BUTTON.SECONDARY} className={BUTTON_MARGIN}> Back </Button>
+          <Button href={`/`} variant={BUTTON.SECONDARY} className={BUTTON_MARGIN}> Back </Button>
         </Col>
       </Row>
       <SessionSummary isVisible={showSessionSummary} session={sessionToSummarize} close={() => { setShowSessionSummary(false) }} />
