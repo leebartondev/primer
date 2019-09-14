@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eeb075cd65b54ae669632d6055e9ee44",
+    "revision": "514db78025f791429b71de7e84476636",
     "url": "/primer/index.html"
   },
   {
-    "revision": "8c42b029f471904e7ac8",
+    "revision": "772140edcf660851d2ff",
     "url": "/primer/static/css/main.db8700f0.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/primer/static/js/2.af6e74e4.chunk.js"
   },
   {
-    "revision": "8c42b029f471904e7ac8",
-    "url": "/primer/static/js/main.3aacab7d.chunk.js"
+    "revision": "772140edcf660851d2ff",
+    "url": "/primer/static/js/main.92a0ffd8.chunk.js"
   },
   {
     "revision": "a571426ff3781cb70be7",
