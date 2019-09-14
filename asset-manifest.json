@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/primer/static/css/main.db8700f0.chunk.css",
-    "main.js": "/primer/static/js/main.a96cfaf9.chunk.js",
-    "main.js.map": "/primer/static/js/main.a96cfaf9.chunk.js.map",
+    "main.js": "/primer/static/js/main.5d1010e3.chunk.js",
+    "main.js.map": "/primer/static/js/main.5d1010e3.chunk.js.map",
     "runtime~main.js": "/primer/static/js/runtime~main.b83768aa.js",
     "runtime~main.js.map": "/primer/static/js/runtime~main.b83768aa.js.map",
-    "static/js/2.067998ad.chunk.js": "/primer/static/js/2.067998ad.chunk.js",
-    "static/js/2.067998ad.chunk.js.map": "/primer/static/js/2.067998ad.chunk.js.map",
+    "static/js/2.9c104d36.chunk.js": "/primer/static/js/2.9c104d36.chunk.js",
+    "static/js/2.9c104d36.chunk.js.map": "/primer/static/js/2.9c104d36.chunk.js.map",
     "index.html": "/primer/index.html",
-    "precache-manifest.ef2e2a3a9a7eb0a13bb9e7ba50219294.js": "/primer/precache-manifest.ef2e2a3a9a7eb0a13bb9e7ba50219294.js",
+    "precache-manifest.20fa66173cac0da8b73086507685222d.js": "/primer/precache-manifest.20fa66173cac0da8b73086507685222d.js",
     "service-worker.js": "/primer/service-worker.js",
     "static/css/main.db8700f0.chunk.css.map": "/primer/static/css/main.db8700f0.chunk.css.map"
   }
