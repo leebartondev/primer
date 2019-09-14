@@ -7,7 +7,7 @@
 
 // Require imports
 import React, { useState } from 'react'
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 
 // Custom file imports
