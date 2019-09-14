@@ -8,10 +8,11 @@
 // Require imports
 import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom'
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Container, Row, Col, Button, Badge } from 'react-bootstrap'
 
 // Custom file imports
 import myStorage from '../../util/storage/myStorage.js'
+import myTime from '../../util/myTime.js'
 import SessionCard from '../common/cards/session_card.js'
 import SessionSummary from './session_summary.js'
 
@@ -29,10 +30,12 @@ const ROW_STYLE = { FLOAT: 'float right row-padding', PADDING: 'row-padding' }
 const BUTTON = { SECONDARY: 'secondary', PRIMARY: 'primary' }
 const BUTTON_MARGIN = 'btn-margin left'
 const MAX_COLS = 4
+const BADGE_VARIANT = 'dark'
 
 // Text
 const DEFAULT_MESSAGE = 'No sessions to display'
 const CARD_BG = 'success'
+const BADGE_TEXT = 'Total Time: '
 
 // Paths
 const PATH_DEFAULT = '/'
@@ -54,6 +57,15 @@ function Project (props) {
   // Get sessions for current project
   const sessions = myStorage.get.sessionsByProjectId(project.id)
 
+  // Get total time
+  const getTotalProjectTime = () => {
+    let total = 0
+    sessions.forEach(session => {
+      total += session.total_seconds
+    })
+    return myTime.generateTotalSessionTimeMessage(myTime.convertToTimeArrayDays(total))
+  }
+
   // Handle session link click (show modal)
   const handleSessionClick = index => {
     setSessionToSummarize(sessions[index])
@@ -61,12 +73,14 @@ function Project (props) {
   }
 
   const handleButtonClick = path => {
-    props.history.push(path)
+    props.history.push(`${path}`)
   }
 
   return (
     <Container fluid={CONTAINER_IS_FLUID}>
-      <h1 className={TITLE_STYLE}>{project.title}</h1>
+      <h1 className={TITLE_STYLE}>
+        {project.title} {(sessions.length) ? <Badge variant={BADGE_VARIANT}>{`${BADGE_TEXT} ${getTotalProjectTime()}`}</Badge> : null}
+      </h1>
       {(sessionRows.length)
         ? sessionRows.map((row, index) =>
           <Row key={index} className={ROW_STYLE.PADDING}>

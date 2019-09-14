@@ -7,11 +7,13 @@
 
 // Timer
 export const INCREMENT_TIMER = 'INCREMENT_TIMER'
+export const RESET_TIMER = 'RESET_TIMER'
 
 // Timer State
 export const SET_TIMING = 'SET_TIMING'
 export const SET_PAUSED = 'SET_PAUSED'
 export const SET_END = 'SET_END'
+export const RESET_TIMER_STATE = 'RESET_TIMER_STATE'
 
 // Session
 export const SET_SESSION_DATE = 'SET_SESSION_DATE'
@@ -20,6 +22,7 @@ export const SET_SESSION_TOTAL = 'SET_SESSION_TOTAL'
 export const ADD_SESSION_LOG = 'ADD_SESSION_LOG'
 export const POP_SESSION_LOG = 'POP_SESSION_LOG'
 export const CLEAR_SESSION_LOGS = 'CLEAR_SESSION_LOGS'
+export const CLEAR_SESSION = 'CLEAR_SESSION'
 
 // Projects
 export const ADD_PROJECT = 'ADD_PROJECT'

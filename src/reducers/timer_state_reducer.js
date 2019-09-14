@@ -6,7 +6,12 @@
 /// /////////////////////////////////////////////////
 
 // Custom file imports
-import { SET_TIMING, SET_PAUSED, SET_END } from '../actions/types.js'
+import {
+  SET_TIMING,
+  SET_PAUSED,
+  SET_END,
+  RESET_TIMER_STATE
+} from '../actions/types.js'
 
 /// /////////////////////////////////////////////////
 // G L O B A L   V A R I A B L E S
@@ -26,6 +31,8 @@ export default (state = INITIAL_STATE, action) => {
       return Object.assign({}, state, { paused: action.payload })
     case SET_END:
       return Object.assign({}, state, { end: action.payload })
+    case RESET_TIMER_STATE:
+      return Object.assign({}, state, INITIAL_STATE)
     default:
       return state
   }

@@ -6,7 +6,7 @@
 /// /////////////////////////////////////////////////
 
 // Custom file imports
-import { INCREMENT_TIMER } from '../actions/types.js'
+import { INCREMENT_TIMER, RESET_TIMER } from '../actions/types.js'
 
 /// /////////////////////////////////////////////////
 // G L O B A L   V A R I A B L E S
@@ -22,6 +22,8 @@ export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case INCREMENT_TIMER:
       return Object.assign({}, state, { seconds: state.seconds + 1 })
+    case RESET_TIMER:
+      return Object.assign({}, state, INITIAL_STATE)
     default:
       return state
   }

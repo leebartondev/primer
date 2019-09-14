@@ -62,7 +62,6 @@ function Projects (props) {
   }
 
   const deleteProject = id => {
-    console.log('Deleting Project: ' + id)
     // Remove project from storage
     myStorage.delete.projectById(id)
     // Update store

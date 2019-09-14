@@ -80,6 +80,13 @@ function SessionController (props) {
     props.popSessionLog()
   }
 
+  // Cleanup
+  const cleanupState = () => {
+    props.clearSession()
+    props.resetTimer()
+    props.resetTimerState()
+  }
+
   // Submit session
   const submitSession = desc => {
     props.setSessionDate()
@@ -88,9 +95,11 @@ function SessionController (props) {
       date: props.session.date,
       desc: desc,
       total: props.session.total,
+      total_seconds: props.timer.seconds,
       logs: props.session.logs,
       projectId: props.projectId
     })
+    cleanupState()
     props.history.push(PATH_PROJECT(props.projectId))
   }
 
@@ -111,8 +120,8 @@ function SessionController (props) {
   )
 }
 
-function mapStateToProps ({ timerState, session }) {
-  return { timerState, session }
+function mapStateToProps ({ timerState, timer, session }) {
+  return { timerState, timer, session }
 }
 
 export default connect(mapStateToProps, actions)(withRouter(SessionController))

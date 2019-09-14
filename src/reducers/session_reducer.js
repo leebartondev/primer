@@ -12,7 +12,8 @@ import {
   SET_SESSION_TOTAL,
   ADD_SESSION_LOG,
   POP_SESSION_LOG,
-  CLEAR_SESSION_LOGS
+  CLEAR_SESSION_LOGS,
+  CLEAR_SESSION
 } from '../actions/types.js'
 
 /// /////////////////////////////////////////////////
@@ -44,6 +45,8 @@ export default (state = INITIAL_STATE, action) => {
     case CLEAR_SESSION_LOGS:
       const tempClearedLogs = []
       return Object.assign({}, state, { logs: tempClearedLogs })
+    case CLEAR_SESSION:
+      return Object.assign({}, state, INITIAL_STATE)
     default:
       return state
   }
